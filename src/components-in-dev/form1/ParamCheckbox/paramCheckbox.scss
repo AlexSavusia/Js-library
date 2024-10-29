@@ -1,0 +1,74 @@
+@import '../../../assets/global-style/mixin';
+
+.param-checkbox {
+	--param-checkbox-color-blue: #00b2df;
+	--param-checkbox-color-gray: #c4c4c4;
+	--param-checkbox-color-white: #ffffff;
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: 32px;
+	}
+
+	&__item {
+		margin-bottom: 12px;
+
+		&:not(:last-child) {
+			margin-right: 12px;
+		}
+	}
+
+	&__label {
+		position: relative;
+		display: flex;
+		align-items: center;
+		padding: 6px 12px;
+		background-color: var(--param-checkbox-color-gray);
+		border-radius: 50px;
+		cursor: pointer;
+		transition: opacity 0.5s, padding-left 0.5s;
+
+		&:hover {
+			opacity: 0.7;
+		}
+	}
+
+	&__icon {
+		position: absolute;
+		left: 12px;
+		top: 50%;
+		transform: translate(0, -50%);
+		opacity: 0;
+		margin-right: 10px;
+		fill: var(--param-checkbox-color-blue);
+		transition: opacity 0.5s;
+	}
+
+	&__name {
+		font-size: 16px;
+		line-height: 100%;
+		color: var(--param-checkbox-color-white);
+
+		@include before_768 {
+			font-size: 14px;
+		}
+	}
+
+	&__icon {
+		fill: var(--param-checkbox-color-white);
+	}
+
+	&__input:checked + .param-checkbox__label {
+		padding-left: 30px;
+		background-color: var(--param-checkbox-color-blue);
+
+		.param-checkbox__icon {
+			opacity: 1;
+		}
+
+		.param-checkbox__name {
+			color: var(--param-checkbox-color-white);
+		}
+	}
+}

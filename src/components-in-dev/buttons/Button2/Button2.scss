@@ -1,0 +1,91 @@
+@import '../../../assets/global-style/mixin';
+
+.button2 {
+    padding: 0;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 140%;
+
+    border: none;
+    background: none;
+    border: 2px solid transparent;
+    border-radius: 16px;
+    background: var(--primery-gradient);
+
+    box-sizing: border-box;
+    cursor: pointer;
+    outline: none;
+    overflow: hidden;
+    -webkit-appearance: none; //убирает дефолтные стили в ios
+
+    @include before_768 {
+        font-size: 16px;
+    }
+
+    &__box {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background: var(--color-white);
+    }
+
+    &__flex {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 16px;
+        color: var(--accent-primery-color);
+        text-decoration: none;
+        text-align: center;
+        background: var(--primery-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        z-index: 3;
+    }
+
+    &__el {
+        &:not(:last-child) {
+            margin-right: 8px;
+        }
+    }
+
+    &__icon {
+        fill: var(--primery-gradient);
+        // transition: 0.5s;
+    }
+
+    &:hover {
+        background: var(--hover-gradient);
+
+        .button2__flex {
+            background: var(--hover-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    &:active {
+        background: var(--click-gradient);
+
+        .button2__flex {
+            background: var(--click-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    // &:focus {
+    //     opacity: 0.9;
+    //     transition: 0.1s;
+    // }
+
+    &.disabled {
+        opacity: 0.6;
+        pointer-events: none;
+    }
+
+    &--100 {
+        width: 100%;
+    }
+}

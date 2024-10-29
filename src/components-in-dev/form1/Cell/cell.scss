@@ -1,0 +1,90 @@
+@import '../../../assets/global-style/mixin';
+
+.cell {
+	--cell-text-color: #003140;
+	--cell-error-color: #e64646;
+	--cell-border-color: #c4c4c4;
+	--cell-disabled-color: #c4c4c4;
+	--cell-background-color: #ffffff;
+	--cell-border-color-on-focus: #00b2df;
+
+	&--mb24 {
+		margin-bottom: 24px;
+	}
+
+	&__name {
+		position: relative;
+		display: block;
+		margin-bottom: 12px;
+		font-weight: 400;
+		font-size: 18px;
+		color: var(--cell-text);
+		background-color: transparent;
+		transition: 0.5s;
+
+		@include before_768 {
+			font-size: 14px;
+		}
+	}
+
+	&__content {
+		position: relative;
+		height: 100%;
+	}
+
+	&__data {
+		position: relative;
+		padding: 10px 24px;
+		border: 1px solid var(--cell-border-color);
+		background-color: var(--cell-background-color);
+		border-radius: 16px;
+		transition: 0.5s;
+
+		@include before_768 {
+			padding: 12px 16px;
+		}
+	}
+
+	&__error-message {
+		margin-top: 6px;
+		font-size: 14px;
+		line-height: 140%;
+		color: var(--cell-error-color);
+		display: none;
+	}
+
+	&__identificator {
+		position: absolute;
+		right: 18px;
+		top: 50%;
+		transform: translate(0, -50%);
+	}
+
+	&__icon {
+		display: block;
+	}
+
+	&.js-focus {
+		.cell__data {
+			border-color: var(--cell-border-color-on-focus);
+		}
+	}
+
+	&.js-cell-error {
+		.cell__data {
+			border-color: var(--cell-error-color);
+		}
+	}
+
+	&.js-cell-disabled {
+		.cell__data {
+			background-color: var(--cell-disabled-color);
+			pointer-events: none;
+			cursor: not-allowed;
+		}
+	}
+
+	&.js-cell-hidden {
+		display: none;
+	}
+}

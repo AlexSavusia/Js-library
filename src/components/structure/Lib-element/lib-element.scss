@@ -1,0 +1,27 @@
+.lib-element {
+    &__name {
+        // margin-bottom: 12px;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 150%;
+    }
+
+    &__description {
+        margin-bottom: 24px;
+        font-size: 16px;
+        line-height: 150%;
+        color: var(--color-black-rgba50);
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 48px;
+        }
+    }
+
+    &__status-name {
+        margin-bottom: 12px;
+        font-size: 16px;
+        line-height: 150%;
+    }
+}

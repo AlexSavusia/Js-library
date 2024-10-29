@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Title</title>
+    </head>
+    <body>
+        <!-- Это исходный класс, его не нужно использовать в верстке -->
+        <div class="cell js-cell" data-class="CellInput" data-name="Surname">
+            <div class="cell__content">
+                <label for="Surname" class="cell__name js-cell-name"> Текстовое поле </label>
+                <div class="cell__data">
+                    <!-- В cell__data лежита какие либо инпуты, селекты и т.д -->
+                    <div class="cell__identificator">
+                        <!--Это блок с иконкой для инпута -->
+                        <svg class="cell__icon" width="24" height="24">
+                            <use href="/assets/sprite.svg#icon-mail"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="cell__error-message js-error-message">Заполните поле</div>
+        </div>
+    </body>
+</html>

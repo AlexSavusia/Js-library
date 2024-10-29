@@ -1,0 +1,54 @@
+@import '../../../assets/global-style/mixin';
+
+.param-radiobutton {
+	--param-radiobutton-text-color: #003140;
+	--param-radiobutton-color-blue: #00b2df;
+	--param-radiobutton-color-gray: #c4c4c4;
+	--param-radiobutton-color-white: #ffffff;
+
+	display: inline-flex;
+	flex-direction: column;
+
+	@include before_480 {
+		display: flex;
+	}
+
+	&__list {
+		display: flex;
+		padding: 6px;
+		background-color: var(--param-radiobutton-color-gray);
+		border-radius: 8px;
+
+		@include before_768 {
+			flex-direction: column;
+		}
+	}
+
+	&__name {
+		display: flex;
+		align-items: center;
+		height: 100%;
+		padding: 14px 24px;
+		font-size: 16px;
+		line-height: 100%;
+		color: var(--param-radiobutton-color-white);
+		border-radius: 8px;
+		cursor: pointer;
+		transition: 0.5s;
+
+		@include before_768 {
+			padding: 14px 20px;
+			font-size: 14px;
+		}
+
+		&:hover {
+			color: var(--param-radiobutton-color-blue);
+		}
+	}
+
+	&__input:checked + .param-radiobutton__name {
+		color: var(--param-radiobutton-text-color);
+		background-color: var(--param-radiobutton-color-white);
+		box-shadow: 0px 2px 2px rgba(50, 50, 71, 0.06), 0px 2px 4px rgba(50, 50, 71, 0.06);
+	}
+}

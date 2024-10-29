@@ -1,0 +1,28 @@
+@import '../../../assets/global-style/mixin';
+
+.cell-datepicker {
+    width: 100%;
+    padding: 0;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0.04em;
+    color: var(--text-primery-color);
+    border: none;
+    outline: none;
+    background-color: transparent;
+
+    @include before_768 {
+        font-size: 14px;
+    }
+
+    &::placeholder {
+        font-size: 16px;
+        line-height: 140%;
+        letter-spacing: 0.04em;
+        color: var(--color-black-third);
+
+        @include before_768 {
+            font-size: 14px;
+        }
+    }
+}

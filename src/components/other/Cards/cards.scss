@@ -1,0 +1,45 @@
+.cards {
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 24px;
+    }
+
+    &__item {
+        font-family: var(--font-primery);
+        text-decoration: none;
+        border-radius: 12px;
+        overflow: hidden;
+        transition: 0.5s;
+
+        &:hover {
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            transform: translate(0, -3px);
+        }
+    }
+
+    &__img-box {
+        position: relative;
+        padding-bottom: 50%;
+    }
+
+    &__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    &__info {
+        padding: 12px;
+        background-color: var(--bg-primery-color);
+    }
+
+    &__name {
+        text-align: center;
+        color: var(--text-primery-color);
+    }
+}

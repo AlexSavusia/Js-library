@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" href="favicon.ico" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+		<title>Савуся</title>
+	</head>
+	<body>
+		<div class="grid">
+			<header class="header">
+				<div class="wrapper">
+					<div class="header__text">Эксперименты Алексея</div>
+				</div>
+			</header>
+			<main class="main myExperiment form1">
+				<div class="wrapper">
+					<div class="lib-element myExperiment__lib-element">
+						<div class="lib-element__list">
+							<div class="lib-element__item">
+								<!-- Название соответствует названию папки компонента-->
+								<div class="lib-element__name">Form1</div>
+								<div class="lib-element__description">Типы полей &#128515;</div>
+								<div class="form1__block">
+									<form action="#" method="post" class="form js-form" data-name="Example" autocomplete="off">
+										<div class="form__flex">
+											<div class="form__el">
+												<div class="cell js-cell" data-class="CellSelect" data-name="Select">
+													<div class="cell__content">
+														<label for="Select" class="cell__name js-cell-name"> Селект </label>
+														<div class="cell__data">
+															<div class="cell-select js-cell-select">
+																<div class="cell-select__header js-cell-select-header">
+																	<input class="js-cell-select-backend" type="hidden" name="Select" value="" />
+																	<div class="cell-select__input-box">
+																		<input id="Select" class="cell-select__input js-cell-input" value="" placeholder="Выберите из списка" />
+																	</div>
+																	<svg class="cell-select__icon" width="18px" height="11px">
+																		<use xlink:href="/assets/sprite.svg#cell-select-arrow"></use>
+																	</svg>
+																</div>
+																<div class="cell-select__body js-cell-select-body">
+																	<div class="cell-select__item js-cell-select-item" data-index="0" data-item-value="back">
+																		<span class="cell-select__item-info js-cell-select-item-info">Раз</span>
+																		<svg class="cell-select__body-icon" width="11px" height="8px">
+																			<use xlink:href="/assets/sprite.svg#cell-select-body"></use>
+																		</svg>
+																	</div>
+																	<div class="cell-select__item js-cell-select-item" data-index="1" data-item-value="end">
+																		<span class="cell-select__item-info js-cell-select-item-info">Два</span>
+																		<svg class="cell-select__body-icon" width="11px" height="8px">
+																			<use xlink:href="/assets/sprite.svg#cell-select-body"></use>
+																		</svg>
+																	</div>
+																	<div class="cell-select__item js-cell-select-item" data-index="2" data-item-value="value">
+																		<span class="cell-select__item-info js-cell-select-item-info">Три</span>
+																		<svg class="cell-select__body-icon" width="11px" height="8px">
+																			<use xlink:href="/assets/sprite.svg#cell-select-body"></use>
+																		</svg>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="cell__error-message js-error-message">Заполните поле</div>
+												</div>
+											</div>
+											<div class="form__el">
+												<div class="cell cell--mb24 js-cell" data-class="CellFias" data-name="Address">
+													<div class="cell__content">
+														<label for="Select" class="cell__name js-cell-name"> Справочник адресов </label>
+														<div class="cell__data">
+															<div class="cell-fias js-cell-select">
+																<div class="cell-fias__header js-cell-select-header">
+																	<input class="js-cell-select-backend" type="hidden" name="Address" value="" />
+																	<input
+																		id="Address"
+																		class="cell-fias__input js-cell-input"
+																		type="text"
+																		value=""
+																		placeholder="Город, улица, дом, квартира"
+																	/>
+																</div>
+																<div class="cell-fias__body js-cell-select-body">
+																	<!-- Сюда идут значения адресов -->
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="cell__error-message js-error-message">Заполните поле</div>
+												</div>
+											</div>
+										</div>
+										<div class="form__error js-form-error"></div>
+										<div class="form__buttons">
+											<button class="button js-form-button" type="submit">Отправить</button>
+											<button class="button js-form-ex" type="button">Test click</button>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+			<footer class="footer">
+				<div class="wrapper">
+					<div class="footer__text">2022 год</div>
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,23 @@
+.link-icon {
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+
+	&__text {
+		font-family: 'MuseoSansCyrl', 'Arial', sans-serif;
+		margin-right: 11px;
+		font-size: 14px;
+		line-height: 20px;
+		letter-spacing: 0.02em;
+		color: var(--color-blue);
+	}
+
+	&__svg {
+		flex-shrink: 0;
+		fill: var(--color-blue);
+
+		&--red {
+			fill: #e7413a;
+		}
+	}
+}

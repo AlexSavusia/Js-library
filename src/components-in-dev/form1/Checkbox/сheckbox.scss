@@ -1,0 +1,84 @@
+@import '../../../assets/global-style/mixin';
+
+.checkbox {
+	--checkbox-text-color: #003140;
+	--checkbox-link-color: #00b2df;
+	--checkbo-window-color: #00b2df;
+
+	&--margin {
+		margin-bottom: 24px;
+	}
+
+	&__item {
+		display: flex;
+		flex-shrink: 0;
+		align-items: center;
+
+		&--half {
+			width: 50%;
+			margin-bottom: 30px;
+		}
+	}
+
+	&__window {
+		display: flex;
+		flex-shrink: 0;
+		align-items: center;
+		justify-content: center;
+		width: 20px;
+		height: 20px;
+		margin-right: 12px;
+		background: transparent;
+		border: 1px solid var(--checkbo-window-color);
+		border-radius: 1px;
+	}
+
+	&__icon-mark {
+		fill: var(--checkbo-window-color);
+		opacity: 0;
+		transition: 0.5s;
+	}
+
+	&__name {
+		display: flex;
+		align-items: flex-start;
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 22px;
+		letter-spacing: 0.04em;
+		color: var(--checkbox-text-color);
+		cursor: pointer;
+
+		&--info {
+			margin-right: 12px;
+			min-width: 126px;
+		}
+	}
+
+	&__input:checked + .checkbox__name {
+		.checkbox__icon-mark {
+			opacity: 1;
+		}
+	}
+
+	&__link {
+		color: var(--checkbox-link-color);
+		text-decoration: none;
+		border-bottom: 1px solid var(--checkbox-link-color);
+		transition: 0.5s;
+
+		&:hover {
+			border-bottom: 1px solid transparent;
+		}
+	}
+
+	&__text {
+		&--margin {
+			margin-right: 5px;
+		}
+	}
+
+	&.js-checkbox-hidden {
+		display: none;
+	}
+}

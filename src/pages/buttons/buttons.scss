@@ -1,0 +1,25 @@
+@import '../../components/link-icon/link-icon';
+@import '../../components/structure/Grid/grid';
+@import '../../components/structure/Header/header';
+@import '../../components/structure/Main/main';
+@import '../../components/structure/Wrapper/wrapper';
+@import '../../components/structure/Lib-element/lib-element';
+@import '../../components/other/Cards/cards';
+@import '../../components/images/Icon/icon';
+@import '../../components/structure/Footer/footer';
+
+//--------------------- Components Lib --------------------------------
+@import '../../components-lib/buttons/button1/button1';
+@import '../../components-lib/buttons/button2/button2';
+
+.buttons {
+    &__flex {
+        display: flex;
+    }
+
+    &__el {
+        &:not(:last-child) {
+            margin-right: 24px;
+        }
+    }
+}

@@ -1,0 +1,122 @@
+@import '../../../assets/global-style/mixin';
+
+.cell-fias {
+	--cell-fias-text-color: #003140;
+	--cell-fias-input-placeholder: #c4c4c4;
+	--cell-fias-background-color-hover: #f2f2f2;
+
+	position: relative;
+	width: 100%;
+	z-index: 10;
+
+	&__header {
+		cursor: pointer;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__current {
+		font-size: 17px;
+		line-height: 140%;
+		color: var(--cell-fias-text-color);
+		opacity: 1;
+		transition: opacity 0.5s cubic-bezier(0.32, 0, 0.67, 0);
+
+		@include before_768 {
+			font-size: 14px;
+		}
+	}
+
+	&__input {
+		width: 100%;
+		padding: 0;
+		font-size: 18px;
+		line-height: 140%;
+		color: var(--cell-fias-text-color);
+		border: none;
+		outline: none;
+		background-color: transparent;
+
+		@include before_768 {
+			font-size: 14px;
+		}
+
+		&::placeholder {
+			font-size: 18px;
+			line-height: 140%;
+			color: var(--cell-fias-input-placeholder);
+
+			@include before_768 {
+				font-size: 14px;
+			}
+		}
+	}
+
+	&__icon {
+		width: 12px;
+		height: auto;
+		fill: var(--color-black-rgba80);
+		transition: 0.5s;
+
+		@include before_768 {
+			width: 14px;
+			height: auto;
+		}
+	}
+
+	&__body-icon {
+		opacity: 1;
+		fill: var(--color-gray-1);
+		transition: 0.2s;
+	}
+
+	&__body {
+		display: none;
+		position: absolute;
+		left: 50%;
+		right: 0;
+		top: calc(100% + 20px);
+		width: calc(100% + 50px);
+		max-height: 300px;
+		overflow-y: auto;
+		transform: translate(-50%, 0);
+		background-color: #ffffff;
+		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+		border-radius: 10px;
+	}
+
+	&.is-active {
+		z-index: 11;
+
+		.cell-select__icon {
+			transform: rotate(180deg);
+		}
+	}
+
+	&__item {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		cursor: pointer;
+		font-weight: normal;
+		font-size: 16px;
+		line-height: 26px;
+		letter-spacing: 0.04em;
+		padding: 12px 16px;
+		color: var(--cell-fias-text-color);
+		transition: color 0.5s;
+
+		@include before_768 {
+			font-size: 14px;
+		}
+
+		&:hover {
+			background-color: var(--cell-fias-background-color-hover);
+		}
+	}
+
+	&__body-icon {
+		opacity: 0;
+	}
+}

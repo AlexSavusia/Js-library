@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Title</title>
+    </head>
+    <body>
+        <div class="checkbox js-checkbox" data-name="CopyAddress">
+            <div class="checkbox__item">
+                <input
+                    id="CopyAddress"
+                    type="checkbox"
+                    class="checkbox__input js-checkbox-input visually-hidden"
+                    name="CopyAddress"
+                    data-required="false"
+                />
+                <label for="CopyAddress" class="checkbox__name">
+                    <div class="checkbox__window">
+                        <svg class="checkbox__icon-mark" width="12px" height="10px">
+                            <use xlink:href="/assets/sprite.svg#icon-checkbox"></use>
+                        </svg>
+                    </div>
+                    <div class="checkbox__content">
+                        <span class="checkbox__text"> Совпадает с адресом регистрации </span>
+                        <div class="checkbox__error-message js-checkbox-error-message">необходимо отметить это поле</div>
+                    </div>
+                </label>
+            </div>
+        </div>
+    </body>
+</html>

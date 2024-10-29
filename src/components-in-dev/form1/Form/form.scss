@@ -1,0 +1,43 @@
+@import '../../../assets/global-style/mixin';
+
+.form {
+	&__flex {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		margin-bottom: 24px;
+	}
+
+	&__el {
+		//display: flex;
+		//flex-direction: column;
+		//justify-content: center;
+		width: 48%;
+
+		&:not(:last-child) {
+			margin-bottom: 24px;
+		}
+	}
+
+	&__buttons {
+		display: flex;
+		gap: 24px;
+	}
+
+	&__group {
+		display: flex;
+		gap: 12px;
+	}
+
+	&__error {
+		display: none;
+		margin-bottom: 12px;
+		font-size: 14px;
+		line-height: 140%;
+		color: var(--error-primery-color);
+	}
+
+	&.js-form-hidden {
+		display: none;
+	}
+}

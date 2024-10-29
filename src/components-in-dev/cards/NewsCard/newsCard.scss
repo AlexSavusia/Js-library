@@ -1,0 +1,279 @@
+@import '../../../assets/global-style/mixin';
+
+.news-card {
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 24px;
+        column-gap: 24px;
+        margin-bottom: 24px;
+
+        @include before_1200 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include before_768 {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        background-color: var(--content-bg-primery-color);
+        border-radius: 24px;
+
+        &--border {
+            border: 1px solid var(--calm-color-2);
+        }
+    }
+
+    &__rating {
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        z-index: 10;
+    }
+
+    &__img-box {
+        position: relative;
+        display: block;
+        padding-bottom: 43.67%;
+        border-radius: 24px 24px 0 0;
+        overflow: hidden;
+    }
+
+    &__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-grow: 1;
+        padding: 16px 24px 24px;
+
+        @include before_480 {
+            padding: 8px 12px 12px;
+        }
+    }
+
+    &__tag {
+        display: block;
+        margin-bottom: 16px;
+        font-size: 16px;
+        line-height: 140%;
+        color: var(--accent-primery-color);
+        text-decoration: none;
+
+        @include before_480 {
+            margin-bottom: 8px;
+            font-size: 12px;
+        }
+    }
+
+    &__title {
+        display: block;
+        margin-bottom: 24px;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 140%;
+        color: var(--title-primery-color);
+        text-decoration: none;
+
+        @include before_1366 {
+            font-size: 18px;
+        }
+
+        @include before_480 {
+            font-size: 16px;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__bottom-el {
+        display: flex;
+        align-items: center;
+
+        &:first-child {
+            margin-right: 8px;
+        }
+    }
+
+    &__avatar {
+        flex-shrink: 0;
+        margin-right: 16px;
+    }
+
+    &__avatar-img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: top;
+    }
+
+    &__name {
+        position: relative;
+        display: block;
+        max-width: 150px;
+        margin-right: 16px;
+        font-size: 16px;
+        color: var(--title-primery-color);
+        text-decoration: none;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        @include before_480 {
+            font-size: 12px;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            right: -8px;
+            top: 50%;
+            transform: translate(0, -50%);
+            width: 2px;
+            height: 2px;
+            border-radius: 50%;
+            background-color: var(--title-primery-color);
+        }
+    }
+
+    &__time {
+        font-size: 16px;
+        color: var(--title-primery-color);
+
+        @include before_480 {
+            font-size: 12px;
+        }
+    }
+
+    &__eye {
+        fill: var(--title-primery-color);
+        margin-right: 8px;
+    }
+
+    &__views {
+        color: var(--calm-color-1);
+
+        @include before_480 {
+            font-size: 12px;
+        }
+    }
+
+    &__card--simple {
+        // background-image: url('../../../assets/img/pages/background-1.svg');
+        background-repeat: no-repeat;
+        background-position: right bottom;
+        .news-card__rating,
+        .news-card__img-box,
+        .news-card__tag,
+        .news-card__avatar {
+            display: none;
+        }
+
+        .news-card__name,
+        .news-card__time,
+        .news-card__views {
+            font-size: 14px;
+            color: var(--calm-color-1);
+        }
+
+        .news-card__name {
+            max-width: 120px;
+
+            @include before_1366 {
+                max-width: 70px;
+            }
+
+            @include before_1200 {
+                max-width: 120px;
+            }
+        }
+
+        .news-card__eye {
+            width: 18px;
+            height: 18px;
+            fill: var(--calm-color-1);
+        }
+
+        &:nth-of-type(2n + 2) {
+            background-position: left top;
+        }
+    }
+
+    &--main-page {
+        .news-card {
+            &__list {
+                grid-template-columns: repeat(6, 1fr);
+                row-gap: 24px;
+                column-gap: 24px;
+            }
+
+            &__card {
+                &:first-child {
+                    grid-column: 1 / span 2;
+
+                    @include before_1200 {
+                        grid-column: 1 / span 3;
+                    }
+
+                    @include before_768 {
+                        grid-column: 1 / span 6;
+                    }
+                }
+
+                &:nth-child(2) {
+                    grid-column: 3 / span 2;
+
+                    @include before_1200 {
+                        grid-column: 4 / span 3;
+                    }
+
+                    @include before_768 {
+                        grid-column: 1 / span 6;
+                    }
+                }
+
+                &:nth-child(3) {
+                    grid-column: 5 / span 2;
+
+                    @include before_1200 {
+                        grid-column: 1 / span 6;
+                    }
+                }
+
+                &:nth-child(2n + 4) {
+                    grid-column: 1 / span 3;
+
+                    @include before_768 {
+                        grid-column: 1 / span 6;
+                    }
+                }
+
+                &:nth-child(2n + 5) {
+                    grid-column: 4 / span 3;
+
+                    @include before_768 {
+                        grid-column: 1 / span 6;
+                    }
+                }
+            }
+        }
+    }
+}

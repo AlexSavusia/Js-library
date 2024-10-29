@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" href="favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+        <title>Савуся</title>
+    </head>
+    <body>
+        <div class="grid">
+            <header class="header">
+                <div class="wrapper">
+                    <div class="header__text">Формы</div>
+                </div>
+            </header>
+            <main class="main myExperiment form1">
+                <div class="wrapper">
+                    <div class="lib-element myExperiment__lib-element">
+                        <div class="lib-element__list">
+                            <div class="lib-element__item">
+                                <!-- Название соответствует названию папки компонента-->
+                                <div class="lib-element__name">Form1</div>
+                                <div class="lib-element__description">Типы полей &#128515;</div>
+                                <div class="form1__block">
+                                    <form action="#" method="post" class="form js-form" data-name="Example" autocomplete="off">
+                                        <div class="form__flex">
+                                            <div class="form__el">
+                                                <div class="cell js-cell" data-class="CellInput" data-name="TextInput">
+                                                    <div class="cell__content">
+                                                        <label for="TextInput" class="cell__name js-cell-name"> Текстовое поле* </label>
+                                                        <div class="cell__data">
+                                                            <input
+                                                                id="TextInput"
+                                                                type="text"
+                                                                class="cell-input js-cell-input"
+                                                                name="TextInput"
+                                                                data-input-type="text"
+                                                                value=""
+                                                                placeholder="Введите текст"
+                                                            />
+                                                        </div>
+                                                    </div>
+                                                    <div class="cell__error-message js-error-message">Заполните поле</div>
+                                                </div>
+                                            </div>
+                                            <div class="form__el">
+                                                <div class="cell js-cell" data-class="CellInput" data-name="TextInputNo" data-required="false">
+                                                    <div class="cell__content">
+                                                        <label for="TextInputNo" class="cell__name js-cell-name"> Необязательное поле </label>
+                                                        <div class="cell__data">
+                                                            <input
+                                                                id="TextInputNo"
+                                                                type="text"
+                                                                class="cell-input js-cell-input"
+                                                                name="TextInputNo"
+                                                                data-input-type="text"
+                                                                value=""
+                                                                placeholder="Введите текст"
+                                                            />
+                                                        </div>
+                                                    </div>
+                                                    <div class="cell__error-message js-error-message">Заполните поле</div>
+                                                </div>
+                                            </div>
+                                            <div class="form__el">
+                                                <div class="cell js-cell js-cell-disabled" data-class="CellInput" data-name="DisabledInput">
+                                                    <div class="cell__content">
+                                                        <label for="DisabledInput" class="cell__name js-cell-name"> Заблокированное поле </label>
+                                                        <div class="cell__data">
+                                                            <input
+                                                                id="DisabledInput"
+                                                                type="text"
+                                                                class="cell-input js-cell-input"
+                                                                name="DisabledInput"
+                                                                data-input-type="text"
+                                                                value="Значение поля"
+                                                                placeholder="Введите текст"
+                                                            />
+                                                        </div>
+                                                    </div>
+                                                    <div class="cell__error-message js-error-message">Заполните поле</div>
+                                                </div>
+                                            </div>
+                                            <div class="form__el">
+                                                <div class="cell js-cell" data-class="CellInputMask" data-name="Phone">
+                                                    <div class="cell__content">
+                                                        <label for="Phone" class="cell__name js-cell-name"> Поле с маской </label>
+                                                        <div class="cell__data">
+                                                            <input
+                                                                id="Phone"
+                                                                type="text"
+                                                                class="cell-input js-cell-input"
+                                                                name="Phone"
+                                                                data-input-type="phone"
+                                                                value=""
+                                                                placeholder="Введите номер телефона"
+                                                            />
+                                                        </div>
+                                                    </div>
+                                                    <div class="cell__error-message js-error-message">Заполните поле</div>
+                                                </div>
+                                            </div>
+                                            <div class="form__el">
+                                                <div class="cell cell--mb24 js-cell" data-class="CellFias" data-name="Address">
+                                                    <div class="cell__content">
+                                                        <label for="Select" class="cell__name js-cell-name"> Справочник адресов </label>
+                                                        <div class="cell__data">
+                                                            <div class="cell-fias js-cell-select">
+                                                                <div class="cell-fias__header js-cell-select-header">
+                                                                    <input class="js-cell-select-backend" type="hidden" name="Address" value="" />
+                                                                    <input
+                                                                        id="Address"
+                                                                        class="cell-fias__input js-cell-input"
+                                                                        type="text"
+                                                                        value=""
+                                                                        placeholder="Город, улица, дом, квартира"
+                                                                    />
+                                                                </div>
+                                                                <div class="cell-fias__body js-cell-select-body">
+                                                                    <!-- Сюда идут значения адресов -->
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cell__error-message js-error-message">Заполните поле</div>
+                                                </div>
+                                            </div>
+                                            <div class="form__el">
+                                                <div class="cell js-cell" data-class="CellSelect" data-name="Select">
+                                                    <div class="cell__content">
+                                                        <label for="Select" class="cell__name js-cell-name"> Селект </label>
+                                                        <div class="cell__data">
+                                                            <div class="cell-select js-cell-select">
+                                                                <div class="cell-select__header js-cell-select-header">
+                                                                    <input class="js-cell-select-backend" type="hidden" name="Select" value="" />
+                                                                    <div class="cell-select__input-box">
+                                                                        <input id="Select" class="cell-select__input js-cell-input" value="" placeholder="Выберите из списка" />
+                                                                    </div>
+                                                                    <svg class="cell-select__icon" width="18px" height="11px">
+                                                                        <use xlink:href="/assets/sprite.svg#cell-select-arrow"></use>
+                                                                    </svg>
+                                                                </div>
+                                                                <div class="cell-select__body js-cell-select-body">
+                                                                    <div class="cell-select__item js-cell-select-item" data-index="0" data-item-value="back">
+                                                                        <span class="cell-select__item-info js-cell-select-item-info">Раз</span>
+                                                                        <svg class="cell-select__body-icon" width="11px" height="8px">
+                                                                            <use xlink:href="/assets/sprite.svg#cell-select-body"></use>
+                                                                        </svg>
+                                                                    </div>
+                                                                    <div class="cell-select__item js-cell-select-item" data-index="1" data-item-value="end">
+                                                                        <span class="cell-select__item-info js-cell-select-item-info">Два</span>
+                                                                        <svg class="cell-select__body-icon" width="11px" height="8px">
+                                                                            <use xlink:href="/assets/sprite.svg#cell-select-body"></use>
+                                                                        </svg>
+                                                                    </div>
+                                                                    <div class="cell-select__item js-cell-select-item" data-index="2" data-item-value="value">
+                                                                        <span class="cell-select__item-info js-cell-select-item-info">Три</span>
+                                                                        <svg class="cell-select__body-icon" width="11px" height="8px">
+                                                                            <use xlink:href="/assets/sprite.svg#cell-select-body"></use>
+                                                                        </svg>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cell__error-message js-error-message">Заполните поле</div>
+                                                </div>
+                                            </div>
+                                            <div class="form__el">
+                                                <div class="cell js-cell" data-class="CellInput" data-name="Email">
+                                                    <div class="cell__content">
+                                                        <label for="Email" class="cell__name js-cell-name"> Поле с иконкой </label>
+                                                        <div class="cell__data cell__data--icon">
+                                                            <input
+                                                                id="Email"
+                                                                type="text"
+                                                                class="cell-input js-cell-input"
+                                                                name="Email"
+                                                                data-input-type="email"
+                                                                value=""
+                                                                placeholder="Введите email"
+                                                            />
+                                                            <div class="cell__identificator">
+                                                                <svg class="cell__icon" width="21" height="21">
+                                                                    <use href="/assets/sprite.svg#mail-icon"></use>
+                                                                </svg>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cell__error-message js-error-message">Заполните поле</div>
+                                                </div>
+                                            </div>
+                                            <div class="form__el">
+                                                <div class="cell cell--mb24 js-cell" data-class="CellDatepicker" data-name="BirthDate">
+                                                    <div class="cell__content">
+                                                        <div class="cell__border-box">
+                                                            <div class="cell__border-left"></div>
+                                                            <div class="cell__border-content">
+                                                                <label for="Email" class="cell__name js-cell-name"> Дата рождения </label>
+                                                            </div>
+                                                            <div class="cell__border-right"></div>
+                                                        </div>
+                                                        <div class="cell__data">
+                                                            <input
+                                                                id="BirthDate"
+                                                                type="text"
+                                                                class="cell-input js-cell-input"
+                                                                name="BirthDate"
+                                                                value=""
+                                                                placeholder="Дата рождения *"
+                                                            />
+                                                            <div class="cell__identificator">
+                                                                <svg class="cell__icon" width="24" height="24">
+                                                                    <use href="/assets/sprite.svg#icon-calendar"></use>
+                                                                </svg>
+                                                            </div>
+                                                            <div class="cell__label-buffer js-label-buffer"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cell__error-message js-error-message">Заполните поле</div>
+                                                </div>
+                                            </div>
+                                            <div class="form__el">
+                                                <div class="cell js-cell" data-class="Checkbox" data-name="CheckboxField">
+                                                    <div class="checkbox js-checkbox">
+                                                        <div class="checkbox__item">
+                                                            <input id="CheckboxField" type="checkbox" class="checkbox__input js-cell-input visually-hidden" name="CheckboxField" />
+                                                            <label for="CheckboxField" class="checkbox__name">
+                                                                <div class="checkbox__window">
+                                                                    <svg class="checkbox__icon-mark" width="12px" height="10px">
+                                                                        <use xlink:href="/assets/sprite.svg#checkbox-mark"></use>
+                                                                    </svg>
+                                                                </div>
+                                                                <div class="checkbox__content">
+                                                                    <p class="checkbox__text">Чекбокс <a class="checkbox__link" href="#">с ссылкой</a></p>
+                                                                </div>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cell__error-message js-error-message">Подтвердите значение</div>
+                                                </div>
+                                            </div>
+                                            <div class="form__el">
+                                                <div class="cell js-cell" data-class="RadioButton" data-name="RadioButton">
+                                                    <div class="radiobutton js-radiobutton">
+                                                        <div class="radiobutton__list">
+                                                            <div class="radiobutton__item">
+                                                                <input
+                                                                    id="Reason1"
+                                                                    type="radio"
+                                                                    class="radiobutton__input js-radiobutton-input visually-hidden"
+                                                                    name="Reason"
+                                                                    value="0"
+                                                                />
+                                                                <label for="Reason1" class="radiobutton__name radiobutton__name--amount">
+                                                                    <div class="radiobutton__window">
+                                                                        <div class="radiobutton__circle"></div>
+                                                                    </div>
+                                                                    <div class="radiobutton__text">Вариант 1</div>
+                                                                </label>
+                                                            </div>
+                                                            <div class="radiobutton__item">
+                                                                <input
+                                                                    id="Reason2"
+                                                                    type="radio"
+                                                                    class="radiobutton__input js-radiobutton-input visually-hidden"
+                                                                    name="Reason"
+                                                                    value="1"
+                                                                />
+                                                                <label for="Reason2" class="radiobutton__name radiobutton__name--amount">
+                                                                    <div class="radiobutton__window">
+                                                                        <div class="radiobutton__circle"></div>
+                                                                    </div>
+                                                                    <div class="radiobutton__text">Вариант 2</div>
+                                                                </label>
+                                                            </div>
+                                                            <div class="radiobutton__item">
+                                                                <input
+                                                                    id="Reason3"
+                                                                    type="radio"
+                                                                    class="radiobutton__input js-radiobutton-input visually-hidden"
+                                                                    name="Reason"
+                                                                    value="2"
+                                                                />
+                                                                <label for="Reason3" class="radiobutton__name radiobutton__name--amount">
+                                                                    <div class="radiobutton__window">
+                                                                        <div class="radiobutton__circle"></div>
+                                                                    </div>
+                                                                    <div class="radiobutton__text">Вариант 3</div>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cell__error-message js-error-message">Выберите значение</div>
+                                                </div>
+                                            </div>
+                                            <div class="form__el">
+                                                <div class="cell js-cell" data-class="Loader" data-name="Files">
+                                                    <div class="loader js-loader">
+                                                        <div class="loader__container">
+                                                            <input type="file" name="Files" class="loader__input js-loader-input visually-hidden" multiple />
+                                                            <div class="loader__name">Название загрузчика</div>
+                                                            <div class="loader__dynamic">
+                                                                <div class="loader__files-list js-loader-files-list"></div>
+                                                                <button class="loader__button js-loader-add-file" type="button">
+                                                                    <div class="loader__button-flex">
+                                                                        <div class="loader__button-el">Добавить файл</div>
+                                                                        <svg class="loader__button-el loader__button-el--plus-icon" width="20" height="20">
+                                                                            <use href="/assets/sprite.svg#loader-plus"></use>
+                                                                        </svg>
+                                                                    </div>
+                                                                </button>
+                                                            </div>
+                                                            <div class="loader__format">В формате pdf, png или jpeg, не больше 5 МБ</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cell__error-message js-error-message">Добавьте файл</div>
+                                                </div>
+                                            </div>
+                                            <div class="form__el">
+                                                <div class="cell js-cell" data-class="CellTextarea" data-name="TextArea">
+                                                    <div class="cell__content">
+                                                        <label for="TextArea" class="cell__name js-cell-name"> Текстовое поле </label>
+                                                        <div class="cell__data">
+                                                            <textarea
+                                                                id="TextArea"
+                                                                type="text"
+                                                                class="cell-textarea js-cell-input"
+                                                                rows="3"
+                                                                cols="45"
+                                                                name="TextArea"
+                                                                autocomplete="off"
+                                                                placeholder="Добавьте свой комментарий"
+                                                            ></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cell__error-message js-error-message">Заполните поле</div>
+                                                </div>
+                                            </div>
+                                            <div class="form__el">
+                                                <div class="form__group">
+                                                    <div class="cell cell--param js-cell" data-class="ParamCheckbox" data-name="Types-0">
+                                                        <div class="param-checkbox js-param-checkbox">
+                                                            <input
+                                                                id="Types-0"
+                                                                type="checkbox"
+                                                                name="Types[]"
+                                                                class="param-checkbox__input visually-hidden js-cell-input"
+                                                                value="0"
+                                                                data-checkbox-name="Types-0"
+                                                            />
+                                                            <label for="Types-0" class="param-checkbox__label">
+                                                                <svg class="param-checkbox__icon" width="13" height="10">
+                                                                    <use href="./assets/sprite.svg#cell-select-body"></use>
+                                                                </svg>
+                                                                <div class="param-checkbox__name">Фамилия</div>
+                                                            </label>
+                                                        </div>
+                                                        <div class="cell__error-message js-error-message">Подтвердите значение</div>
+                                                    </div>
+                                                    <div class="cell cell--param js-cell" data-class="ParamCheckbox" data-name="Types-1">
+                                                        <div class="param-checkbox js-param-checkbox">
+                                                            <input
+                                                                id="Types-1"
+                                                                type="checkbox"
+                                                                name="Types[]"
+                                                                class="param-checkbox__input visually-hidden js-cell-input"
+                                                                value="1"
+                                                                data-checkbox-name="Types-1"
+                                                            />
+                                                            <label for="Types-1" class="param-checkbox__label">
+                                                                <svg class="param-checkbox__icon" width="13" height="10">
+                                                                    <use href="./assets/sprite.svg#cell-select-body"></use>
+                                                                </svg>
+                                                                <div class="param-checkbox__name">Адрес</div>
+                                                            </label>
+                                                        </div>
+                                                        <div class="cell__error-message js-error-message">Подтвердите значение</div>
+                                                    </div>
+                                                    <div class="cell cell--param js-cell" data-class="ParamCheckbox" data-name="Types-2">
+                                                        <div class="param-checkbox js-param-checkbox">
+                                                            <input
+                                                                id="Types-2"
+                                                                type="checkbox"
+                                                                name="Types[]"
+                                                                class="param-checkbox__input visually-hidden js-cell-input"
+                                                                value="2"
+                                                                data-checkbox-name="Types-2"
+                                                            />
+                                                            <label for="Types-2" class="param-checkbox__label">
+                                                                <svg class="param-checkbox__icon" width="13" height="10">
+                                                                    <use href="./assets/sprite.svg#cell-select-body"></use>
+                                                                </svg>
+                                                                <div class="param-checkbox__name">Документ</div>
+                                                            </label>
+                                                        </div>
+                                                        <div class="cell__error-message js-error-message">Подтвердите значение</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form__el">
+                                                <div class="cell js-cell" data-class="ParamRadioButton" data-name="Term">
+                                                    <div class="param-radiobutton js-radiobutton">
+                                                        <div class="param-radiobutton__list">
+                                                            <div class="param-radiobutton__item">
+                                                                <input
+                                                                    id="Term1"
+                                                                    type="radio"
+                                                                    class="param-radiobutton__input js-radiobutton-input visually-hidden"
+                                                                    name="Term"
+                                                                    value="month"
+                                                                    checked
+                                                                />
+                                                                <label for="Term1" class="param-radiobutton__name"> Месяц </label>
+                                                            </div>
+                                                            <div class="param-radiobutton__item">
+                                                                <input
+                                                                    id="Term2"
+                                                                    type="radio"
+                                                                    class="param-radiobutton__input js-radiobutton-input visually-hidden"
+                                                                    name="Term"
+                                                                    value="quarter"
+                                                                />
+                                                                <label for="Term2" class="param-radiobutton__name"> Квартал </label>
+                                                            </div>
+                                                            <div class="param-radiobutton__item">
+                                                                <input
+                                                                    id="Term3"
+                                                                    type="radio"
+                                                                    class="param-radiobutton__input js-radiobutton-input visually-hidden"
+                                                                    name="Term"
+                                                                    value="year"
+                                                                />
+                                                                <label for="Term3" class="param-radiobutton__name"> Год </label>
+                                                            </div>
+                                                            <div class="param-radiobutton__item">
+                                                                <input
+                                                                    id="Term4"
+                                                                    type="radio"
+                                                                    class="param-radiobutton__input js-radiobutton-input visually-hidden"
+                                                                    name="Term"
+                                                                    value="random"
+                                                                />
+                                                                <label for="Term4" class="param-radiobutton__name"> Выбрать период </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cell__error-message js-error-message">Выберите значение</div>
+                                                </div>
+                                            </div>
+                                            <div class="form__el"></div>
+                                        </div>
+                                        <div class="form__error js-form-error"></div>
+                                        <button class="button js-form-button" type="submit">Отправить</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer class="footer">
+                <div class="wrapper">
+                    <div class="footer__text">2022 год</div>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

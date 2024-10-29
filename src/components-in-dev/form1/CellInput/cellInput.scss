@@ -1,0 +1,25 @@
+@import '../../../assets/global-style/mixin';
+
+.cell-input {
+	--cell-input-text-color: #003140;
+	--cell-input-placeholder: #c4c4c4;
+
+	width: 100%;
+	padding: 0;
+	font-size: 18px;
+	line-height: 140%;
+	color: var(--cell-input-text-color);
+	border: none;
+	outline: none;
+	background-color: transparent;
+
+	&::placeholder {
+		font-size: 18px;
+		line-height: 140%;
+		color: var(--cell-input-placeholder);
+
+		@include before_768 {
+			font-size: 16px;
+		}
+	}
+}

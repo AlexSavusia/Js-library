@@ -1,0 +1,49 @@
+@import '../../../assets/global-style/mixin';
+
+.dropdown1 {
+	&__item {
+		&:not(:last-child) {
+			margin-bottom: 24px;
+		}
+
+		&.active {
+			.js-dropdown1__rotate {
+				transform: rotate(180deg);
+			}
+		}
+
+		&.disabled {
+			pointer-events: none;
+			opacity: 0.6;
+		}
+	}
+
+	&__title {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		cursor: pointer;
+	}
+
+	&__name {
+		display: flex;
+		align-items: center;
+	}
+
+	&__number {
+		margin-right: 6px;
+	}
+
+	&__content {
+		display: none;
+		margin: 16px 0 0;
+	}
+
+	&__card-title {
+		flex-grow: 1;
+	}
+
+	.js-dropdown1__rotate {
+		transition: 0.5s;
+	}
+}

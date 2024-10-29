@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Title</title>
+	</head>
+	<body>
+		<div class="cell cell--mb24 js-cell" data-class="Loader" data-name="Files">
+			<div class="loader js-loader">
+				<div class="loader__container">
+					<input type="file" name="Files" class="loader__input js-loader-input visually-hidden" multiple />
+					<div class="loader__name">Название загрузчика</div>
+					<div class="loader__dynamic">
+						<div class="loader__files-list js-loader-files-list"></div>
+						<button class="loader__button js-loader-add-file" type="button">
+							<div class="loader__button-flex">
+								<div class="loader__button-el">Добавить файл</div>
+								<svg class="loader__button-el loader__button-el--plus-icon" width="20" height="20">
+									<use href="/assets/sprite.svg#loader-plus"></use>
+								</svg>
+							</div>
+						</button>
+					</div>
+					<div class="loader__format">В формате pdf, png или jpeg, не больше 5 МБ</div>
+				</div>
+			</div>
+			<div class="cell__error-message js-error-message">Добавьте файл</div>
+		</div>
+	</body>
+</html>

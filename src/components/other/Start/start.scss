@@ -1,0 +1,19 @@
+.start {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    &__img-box {
+        background: linear-gradient(-10deg, #003140 50%, #ffffff 50%);
+    }
+
+    &__img {
+        margin: 0 auto;
+    }
+
+    &__block {
+        flex-grow: 1;
+        width: 100%;
+        background-color: #003140;
+    }
+}

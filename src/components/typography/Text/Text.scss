@@ -1,0 +1,7 @@
+@import '../../../assets/global-style/mixin';
+
+.text {
+	@include adaptive-font(18, 16, 1220);
+	line-height: 140%;
+	color: var(--color-black);
+}

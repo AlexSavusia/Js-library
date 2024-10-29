@@ -1,0 +1,57 @@
+@import '../../../assets/global-style/mixin';
+
+.button2 {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    color: #00b2df;
+    text-decoration: none;
+
+    background-color: transparent;
+    border: none;
+
+    box-sizing: border-box;
+    cursor: pointer;
+    outline: none;
+    transition: 0.5s;
+    -webkit-appearance: none; //убирает дефолтные стили в ios
+
+    &__flex {
+        display: flex;
+        align-items: center;
+    }
+
+    &__el {
+        &:not(:last-child) {
+            margin-right: 8px;
+        }
+    }
+
+    &__icon {
+        fill: #00b2df;
+        transition: 0.5s;
+    }
+
+    &:hover {
+        opacity: 0.7;
+    }
+
+    &:active {
+        opacity: 0.5;
+        transition: 0.1s;
+    }
+
+    &:focus {
+        opacity: 0.9;
+        transition: 0.1s;
+    }
+
+    &.disabled {
+        opacity: 0.8;
+        pointer-events: none;
+    }
+}

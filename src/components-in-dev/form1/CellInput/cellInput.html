@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Title</title>
+    </head>
+    <body>
+		<div class="cell cell--mb24 js-cell" data-class="CellInput" data-name="Email">
+			<div class="cell__content">
+				<label for="Email" class="cell__name js-cell-name"> Электронная почта </label>
+				<div class="cell__data cell__data--icon">
+					<input
+						id="Email"
+						type="text"
+						class="cell-input js-cell-input"
+						name="Email"
+						data-input-type="email"
+						value=""
+						placeholder="Введите email"
+					/>
+					<div class="cell__identificator">
+						<svg class="cell__icon" width="21" height="21">
+							<use href="/assets/sprite.svg#mail-icon"></use>
+						</svg>
+					</div>
+				</div>
+			</div>
+			<div class="cell__error-message js-error-message">Заполните поле</div>
+		</div>
+    </body>
+</html>

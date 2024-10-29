@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" href="favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+        <title>Кнопки</title>
+    </head>
+    <body>
+        <div class="grid">
+            <header class="header">
+                <div class="wrapper">
+                    <div class="header__text">Попапы</div>
+                </div>
+            </header>
+            <main class="main">
+                <section class="buttons">
+                    <div class="wrapper">
+                        <div class="lib-element">
+                            <div class="lib-element__list">
+                                <div class="lib-element__item">
+                                    <!-- Название соответствует названию папки компонента-->
+                                    <div class="lib-element__name">Popup1</div>
+                                    <div class="lib-element__description">Стандартный попап</div>
+                                    <button class="button js-show-popup1" type="button" data-show-popup="popup-id">Показать popup</button>
+                                    <div id="popup-id" class="popup1 js-popup1">
+                                        <div class="popup1__container">
+                                            <div class="popup1__content js-popup1-content">
+                                                <div class="popup1__close js-popup1-close">
+                                                    <svg class="popup1__close-icon" width="22" height="22">
+                                                        <use xlink:href="/assets/sprite.svg#icon-popup-closed"></use>
+                                                    </svg>
+                                                </div>
+                                                <h2 class="title">Заголовок</h2>
+                                                <div class="text">Текстовое описание</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <footer class="footer">
+                <div class="wrapper">
+                    <div class="footer__text">2022 год</div>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

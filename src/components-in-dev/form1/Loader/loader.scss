@@ -1,0 +1,96 @@
+@import '../../../assets/global-style/mixin';
+
+.loader {
+	--loader-text-color: #003140;
+	--loader-color-gray: #c4c4c4;
+	--loader-color-white: #ffffff;
+	--loader-color-blue: #00b2df;
+
+	&__container {
+		padding: 24px;
+		border: 2px dashed var(--loader-color-gray);
+		border-radius: 8px;
+
+		@include before_768 {
+			padding: 16px;
+		}
+	}
+
+	&__files-list {
+		margin-bottom: 12px;
+	}
+
+	&__name {
+		margin-bottom: 12px;
+		font-weight: 300;
+		font-size: 17px;
+		line-height: 110%;
+		color: var(--loader-text-color);
+
+		@include before_768 {
+			font-size: 15px;
+		}
+	}
+
+	&__button {
+		padding: 10px 14px;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 140%;
+		color: var(--loader-text-color);
+		text-decoration: none;
+		text-align: center;
+		background-color: var(--loader-color-white);
+		border: 1px solid var(--loader-color-gray);
+		border-radius: 8px;
+
+		box-sizing: border-box;
+		cursor: pointer;
+		outline: none;
+		transition: opacity 0.5s;
+
+		&:hover {
+			opacity: 0.6;
+		}
+
+		&--file {
+			display: block;
+			color: var(--loader-color-white);
+			background-color: var(--loader-color-blue);
+			border: 1px solid var(--loader-color-blue);
+
+			&:not(:last-child) {
+				margin-bottom: 12px;
+			}
+		}
+	}
+
+	&__button-flex {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__button-el {
+		&:first-child {
+			margin-right: 10px;
+		}
+
+		&--close-icon {
+			flex-shrink: 0;
+			fill: var(--loader-color-white);
+		}
+
+		&--plus-icon {
+			flex-shrink: 0;
+			fill: var(--loader-color-blue);
+		}
+	}
+
+	&__format {
+		margin-top: 12px;
+		font-size: 13px;
+		line-height: 150%;
+		color: var(--loader-color-gray);
+	}
+}

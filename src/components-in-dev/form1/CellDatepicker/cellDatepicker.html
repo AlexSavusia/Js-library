@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Title</title>
+    </head>
+    <body>
+        <div class="cell cell--mb24 js-cell" data-class="CellDatepicker" data-name="Birthday">
+            <div class="cell__content">
+                <div class="cell__border-box">
+                    <div class="cell__border-left"></div>
+                    <div class="cell__border-content">
+                        <label for="Birthday" class="cell__name js-cell-name">
+                            <svg class="cell__name-successful" width="14" height="14">
+                                <use href="/assets/sprite.svg#icon-successful"></use>
+                            </svg>
+                            <svg class="icon icon--red cell__name-star" width="11" height="10">
+                                <use href="/assets/sprite.svg#icon-required-star"></use>
+                            </svg>
+                            <span class="cell__name-text">Дата рождения</span>
+                        </label>
+                    </div>
+                    <div class="cell__border-right js-cell-border-right"></div>
+                </div>
+                <div class="cell__data">
+                    <input id="Birthday" type="text" class="cell-input js-cell-input" name="Birthday" value="" />
+                    <div class="cell__identificator">
+                        <svg class="cell__icon" width="24" height="24">
+                            <use href="/assets/sprite.svg#icon-calendar"></use>
+                        </svg>
+                    </div>
+                    <div class="cell__label-buffer js-label-buffer"></div>
+                </div>
+            </div>
+            <div class="cell__error-message js-error-message">Заполните поле</div>
+        </div>
+    </body>
+</html>
